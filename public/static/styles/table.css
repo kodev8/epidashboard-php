@@ -1,0 +1,150 @@
+.table-wrapper{
+    overflow-x: auto;
+    align-self: flex-start;
+}
+
+/* Reference: https://www.youtube.com/watch?v=Oy9K7iz3aa4 */
+table{
+    border-collapse: collapse;
+    /* box-shadow: 0 5px 10px rgb(0, 0, 0); */
+    align-self: flex-start;
+    border: 1;
+    text-align: center;
+    border-radius: 40px;
+    width: 100%;
+    margin-bottom: 2rem;
+    align-self: center;
+    color: white;
+
+    
+}
+
+/* thead{
+    box-shadow: 0 1px 5px rgb(0, 0, 0);
+}  */
+
+
+th{
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+    font-weight: 900;
+    background-color: rgb(24, 26, 27);
+    border: solid 1px rgb(139, 129, 114);
+
+}
+
+tr{
+    font-size: 0.8rem;
+
+
+}
+
+.empty-t{
+    border: 0 !important;
+    background-color: rgb(0, 0, 0 , 0) !important;
+}
+
+td{
+    border: 1;
+    background-color: rgb(24, 26, 27);
+    padding: 1rem;
+    border: solid 1px rgb(139, 129, 114);
+}
+
+td > a{
+
+    text-decoration: none;
+}
+
+td > a:hover{
+
+    color:rgb(56, 220, 241);
+}
+
+.success{
+    
+    background-color:rgb(102, 190, 102, 0.6) 
+}
+
+.average{
+    
+    background-color:rgba(252, 145, 6, 0.6) 
+}
+.failed{
+    
+    background-color:rgba(228, 46, 46, 0.6) 
+}
+
+
+ .icon-cell {
+    border-color: rgb(139, 129, 114);
+    background-color: rgb(24, 26, 27);
+    visibility: hidden;
+    border: 0;
+    width: var(--icon-cell-width);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    gap: 1em
+}
+
+
+.interactive.hovered > .icon-cell {
+    visibility: visible;
+}
+
+.icon-cell > i{
+    margin: 0.75rem;
+    font-size: 1rem;
+}
+
+.edit,
+.delete,
+.confirm-edit,
+.cancel-edit {
+    cursor: pointer;
+}
+.edit:hover{
+    color: rgb(249, 198, 11);
+}
+.confirm-edit:hover {
+    color: rgb(27, 255, 27)
+}
+
+.cancel-edit:hover,
+.delete:hover{
+    color: red;
+}
+
+.no-results {
+    height: 8rem; 
+    font-size: 2em;
+}
+
+table.interactive-t.no-results {
+    max-width: calc(100% - var(--icon-cell-width));
+}
+
+
+.table-input.disabled .custom-input{
+    border: none;
+    padding: 0;
+    text-align: center;
+
+}
+
+.table-input:not(.disabled) .custom-input {
+    text-align: center;
+    padding: 0.5rem;
+    border: 1px solid rgba(225, 218, 73, 0.379);
+    transition: padding 0.4s ease;
+}
+
+
+
+
+.table-input:not(.disabled) input:focus { 
+    border: 1px solid rgb(24, 255, 24) !important;
+}

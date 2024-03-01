@@ -1,0 +1,281 @@
+
+
+.terminal-container{
+  /* width: fit-content; */
+  min-width: 40%;
+  overflow-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  min-height: 60%;
+} 
+
+
+#terminal{
+
+    position: relative;
+    padding: 1.5em;
+    width:  100%;
+    min-height: 200px;
+    background-color: black;
+    border-bottom-left-radius:  10px;
+    border-bottom-right-radius:  10px;
+    height: 100%;
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+
+.menu{
+    position: relative;
+    height:30px;
+    width: 100%;
+    background-color: rgb(240, 228, 228);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1.2em;
+}
+
+.menu .menu-text {
+  letter-spacing:0.08rem;
+  margin: 0px auto;
+}
+
+.menu .menu-btns{
+  display: flex;
+  justify-content: space-around;
+  min-width: 4rem;
+}
+
+
+.terminal-line {
+    display:flex; 
+    flex-wrap: wrap;
+    margin:  0.8rem 0;
+}
+
+.terminal-text{
+    position: relative;
+    margin-top: 0;
+    color: var(--terminal-active-green);
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    /* overflow-wrap: break-word; */
+}
+
+.terminal-text.response-code {
+  align-self: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
+/* https://www.sitepoint.com/css-typewriter-effect/ */
+
+  /* first typer */
+#typewriter-1{
+    overflow: hidden;
+    border-right: 3px solid var(--terminal-active-green);
+    width: 0;
+    white-space: nowrap;
+    animation: typing 1.5s steps(20, end) forwards,
+                blinking 0.5s 2 1.5s;
+    animation-fill-mode: forwards;
+    
+}
+/* second */
+#typewriter-2{
+    overflow: hidden;
+    border-right: 3px solid var(--terminal-active-green);
+    width: 0;
+    visibility: hidden;
+    white-space: nowrap;
+    animation:  appear 0.5s 1 3s forwards,
+                typing 1.5s steps(20, end) 3.1s forwards,
+                blinking 0.5s 2 4.7s;
+    animation-fill-mode: forwards;
+
+    
+}
+/* .portal-header{
+  float:right;
+  color:white; 
+  margin-right: auto;
+  margin-left:  2rem;
+  text-align: center;
+} */
+
+.terminal-text.shell{
+  margin-right: 10px;
+  /* margin-bottom: 10px; */
+}
+.admin-block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.admin{
+    /* border-width:0; */
+    caret-color: var(--terminal-active-green);
+    /* color:var(--terminal-active-green);
+    outline:none;
+    font-family: "Helvetica Neue" ; */
+    width: 100%;
+    border-radius: 10px;
+    /* height: 2em; */
+    /* padding: 1em; */
+}
+
+.admin:focus { 
+  border-color: var(--terminal-active-green);
+}
+.admin:focus ~ label { 
+  color: var(--terminal-active-green);
+}
+/* 3rd */
+#terminal-line-3{
+    visibility: hidden;
+    animation: appear 0.5s 1 5.0s forwards;
+}
+
+#typewriter-3{
+    overflow: hidden;
+    border-right: 3px solid var(--terminal-active-green);
+    width: 0;
+    visibility: hidden;
+    white-space: nowrap;
+    animation:  appear 0.5s 1 5.1s forwards,
+                typing 1.5s steps(20, end) 5.1s forwards,
+                blinking 0.5s 2 6.4s;
+
+    animation-fill-mode: forwards;
+    
+}
+
+/* 4th */
+
+#typewriter-4, #typewriter-5{
+    /* overflow: hidden; */
+    width: 80%;
+    visibility: hidden;
+    white-space: nowrap;
+    animation:  appear 0.5s 1 7.5s forwards;
+                /* typing 1.5s steps(20, end) 7.6s forwards,
+                blinking2 0.5s 2 9.1s; */
+    animation-fill-mode: forwards;
+    
+}
+
+.admin:-webkit-autofill,
+.admin:-webkit-autofill:hover, 
+.admin:-webkit-autofill:focus, 
+.admin:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 100px rgb(255, 237, 237) inset !important;
+    -webkit-text-fill-color: rgb(71, 250, 71) ;
+}
+
+.skip-animation{
+  animation-delay: 0s !important;  
+  animation-duration: 1ms !important;
+  animation-fill-mode: forwards;
+
+}
+
+/* animations */
+@keyframes typing {
+    from { width: 0% }
+    to { width: 100% }
+  }
+
+  @keyframes typing2 {
+    from { width: 0% }
+    to { width: 50% }
+  }
+
+@keyframes blinking {
+0%   {   border-color: transparent; }
+50%   { border-color: rgb(71, 250, 71) }
+100% { border-color: transparent; }
+}
+
+@keyframes appear {
+from   {  visibility: hidden; }
+to { visibility: visible; }
+}
+
+
+
+/* 
+    first line takes 1.5 seconds 
+    blink takes 1s ---  start at 1.5s
+
+    start appear 1.5 + 1 = 2.5
+    appear takes 0.5s
+    
+    start second typer at 3.1s -> takes 1,5s
+    start blink at 4.6 + 0.1 = 4.7s
+
+    start 3rd typer at 4.8
+    start blink at 6.3
+
+*/
+
+
+/* log in styles */
+@media screen and (max-width: 330px) {
+
+  .login-btn{
+    margin-bottom: 10px;
+  }
+}
+
+
+
+.login-btn {
+  align-items: center;
+  display: inline-flex;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  color: #3c4043;
+  cursor: pointer;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  height: 50px;
+  width: 200px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 2px 12px;
+  position: relative;
+  bottom:0px;
+  text-align: center;
+  text-transform: none;
+  /* width: 50%; */
+}
+
+.login-btn:hover {
+  background: #168a76;
+  color: white;
+}
+
+.login-btn:active {
+ 
+  background-color: rgb(104, 253, 104);
+  outline: none;
+}
+
+
+/* register styles */
