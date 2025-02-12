@@ -5,7 +5,13 @@
 ----------
 
 This project serves to create a full-stack dynamic website with PHP, HTML, CSS, JS and MYSQL.
-A working demo can be found at: https://kodev-epita.000webhostapp.com/
+A working demo can be found at: http://kodev-epita.42web.io/. You can log in with the following credentials to test the application:
+
+- Username: test.admin
+- Password: Test123*
+
+You can also create your own account and approve it to test the application.
+
 The goal of this project is to expand on the previous one. As such, the aim was to build a fully functional, responsive website with all the required features.  These include:
 
 - Adding, removing, and editing different resources
